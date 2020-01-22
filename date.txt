@@ -1,0 +1,28 @@
+NAME
+    date  - print or set the system date and time (linux)
+    gdate - GNU date for macos                    (macos)
+
+DEFINITIONS
+    unix epoch        Jan 1 1970, 00:00 UTC
+    unix timestamp    seconds elapsed since unix epoch
+
+EXAMPLES
+    - Convert unix timestamp to human readable date
+
+        date -d @{{timestamp}}
+
+    - Display the current unix timestamp
+
+        date +%s
+
+    - Convert date to unix timestamp
+
+        date +%s -d "{{date}}"
+
+    - Display the last modification time of a file
+
+        date -r {{file}}
+
+    - Display current time in a different timezone
+
+        TZ="America/New_York" date
