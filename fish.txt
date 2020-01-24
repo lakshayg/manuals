@@ -1,0 +1,20 @@
+NAME
+    fish -- friendly interactive shell
+
+SETUP
+    Fish is a convenient shell to use but it can be tricky to set it as a
+    login shell. One of the problems I faced was that it does not source
+    the ~/.zprofile on macOS. Here's the solution I ended up with:
+
+    1. Leave the login shell unchanged (zsh)
+    2. Set iterm startup cmd to zsh --login -c "exec /usr/local/bin/fish",
+       this ensures that all the variables exported in ~/.zprofile are
+       visible to fish
+
+CUSTOMIZATION
+    Install oh-my-fish: https://github.com/oh-my-fish/oh-my-fish
+    Install "cmorrell" theme: https://github.com/oh-my-fish/theme-cmorrell.com
+    Basic configuration in ~/.config/fish/config.fish
+    * set -u fish_greeting                # disable greeting
+    * set -u set fish_color_valid_path    # disable path underlining
+    * export default_user=<username>      # for cmorrell theme
